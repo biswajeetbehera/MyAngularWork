@@ -5,12 +5,15 @@
     font-size: 14px;
     line-height: 12px;
     color: #333;
+    text-transform: capitalize;
 }
 
 .username-label input {
     border-radius: 8px;
     border: 1px solid #333;
-    height: 30px;
+    height: 36px;
+    padding: 5px;
+    box-sizing: border-box;
 }
 
 .username-label input:focus {

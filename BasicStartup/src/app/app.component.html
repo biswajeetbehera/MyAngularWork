@@ -2,3 +2,12 @@
 <app-success-alert></app-success-alert>
 <app-property-binding></app-property-binding>
 <app-directives></app-directives>
+
+<hr>
+<h1>This is Data Communication components server and cockpit.</h1>
+<app-cockpit (addServer)="OnAddServer($event)"
+             (bpAdded)="OnAddBluePrint($event)"></app-cockpit>
+<app-server [srvElement]="server"
+            *ngFor="let server of server;let i=index">
+    <p [ngStyle]="{color: (server.type === 'Server') ? 'Blue' : 'Red'}">{{server.content}}</p>
+</app-server>

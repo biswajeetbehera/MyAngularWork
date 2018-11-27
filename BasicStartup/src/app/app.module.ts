@@ -6,6 +6,8 @@ import { AppComponent } from './app.component';
 import { WarningAlertComponent } from './warning-alert/warning-alert.component';
 import { FormsModule } from '@angular/forms';
 import { DirectivesComponent } from './directives/directives.component';
+import { CockpitComponent } from './cockpit/cockpit.component';
+import { ServerComponent } from './server/server.component';
 
 @NgModule({
   declarations: [
@@ -13,7 +15,9 @@ import { DirectivesComponent } from './directives/directives.component';
     WarningAlertComponent,
     SuccessAlertComponent,
     PropertyBindingComponent,
-    DirectivesComponent
+    DirectivesComponent,
+    CockpitComponent,
+    ServerComponent
   ],
   imports: [
     BrowserModule,

@@ -1,3 +1,4 @@
+import { ServerEventData, Server } from './Shared/server.modal';
 import { Component } from '@angular/core';
 
 @Component({
@@ -7,4 +8,12 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'BasicStartup';
+  server: Server[] = [];
+
+  OnAddServer(eventData: ServerEventData) {
+    this.server.push(new Server(eventData.serverName, eventData.serverDesc, 'Server'));
+  }
+  OnAddBluePrint(eventData: ServerEventData) {
+    this.server.push(new Server(eventData.serverName, eventData.serverDesc, 'ServerB;uePrint'));
+  }
 }

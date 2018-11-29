@@ -8,6 +8,9 @@ import { FormsModule } from '@angular/forms';
 import { DirectivesComponent } from './directives/directives.component';
 import { CockpitComponent } from './cockpit/cockpit.component';
 import { ServerComponent } from './server/server.component';
+import { GameControlComponent } from './ComponentAssignment/game-control/game-control.component';
+import { OddComponentComponent } from './ComponentAssignment/odd-component/odd-component.component';
+import { EvenComponentComponent } from './ComponentAssignment/even-component/even-component.component';
 
 @NgModule({
   declarations: [
@@ -17,7 +20,10 @@ import { ServerComponent } from './server/server.component';
     PropertyBindingComponent,
     DirectivesComponent,
     CockpitComponent,
-    ServerComponent
+    ServerComponent,
+    GameControlComponent,
+    OddComponentComponent,
+    EvenComponentComponent
   ],
   imports: [
     BrowserModule,

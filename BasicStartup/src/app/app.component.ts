@@ -9,11 +9,16 @@ import { Component } from '@angular/core';
 export class AppComponent {
   title = 'BasicStartup';
   server: Server[] = [];
+  numbers: number[] = [];
 
   OnAddServer(eventData: ServerEventData) {
     this.server.push(new Server(eventData.serverName, eventData.serverDesc, 'Server'));
   }
   OnAddBluePrint(eventData: ServerEventData) {
     this.server.push(new Server(eventData.serverName, eventData.serverDesc, 'ServerB;uePrint'));
+  }
+
+  startGame(number: number) {
+    this.numbers.push(number);
   }
 }

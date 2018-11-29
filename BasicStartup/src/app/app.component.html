@@ -11,3 +11,21 @@
             *ngFor="let server of server;let i=index">
     <p [ngStyle]="{color: (server.type === 'Server') ? 'Blue' : 'Red'}">{{server.content}}</p>
 </app-server>
+
+<hr>
+<h3>This is Component Assignment Section</h3>
+<app-game-control (startGame)="startGame($event)"></app-game-control>
+<div class="container">
+    <div class="row">
+        <div class="col-12 p-2">
+            <ng-container *ngFor="let number of numbers; let odd = odd">
+                <app-odd-component *ngIf="odd">
+                    <p [style.color]="'red'">Odd- {{number}}</p>
+                </app-odd-component>
+                <app-even-component *ngIf="!odd">
+                    <p [style.color]="'blue'">Even- {{number}}</p>
+                </app-even-component>
+            </ng-container>
+        </div>
+    </div>
+</div>

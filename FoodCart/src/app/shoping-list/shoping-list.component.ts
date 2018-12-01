@@ -1,5 +1,5 @@
 import { Ingredient } from './../shared/ingredients.modal';
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input } from '@angular/core';
 
 @Component({
   selector: 'app-shoping-list',
@@ -8,12 +8,9 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ShopingListComponent implements OnInit {
 
-  ingredients: Ingredient[] = [
-    new Ingredient('Apples', 10),
-    new Ingredient('tomatoes', 5)
-  ];
+  @Input() ingredients: Ingredient[];
 
-  constructor() { }
+  constructor () { }
 
   ngOnInit() {
   }

@@ -1,9 +1,10 @@
-<app-header></app-header>
+<app-header (switchLink)="OnSelect($event)"></app-header>
 <div class="container">
     <div class="row">
         <div class="col-12">
-            <app-recipe-book></app-recipe-book>            
-            <app-shoping-list></app-shoping-list>
+            <app-recipe-book *ngIf="featureLoaded === 'recipe'"></app-recipe-book>
+            <app-shoping-list *ngIf="featureLoaded === 'shopping-list'"
+                              [ingredients]="ingredients"></app-shoping-list>
         </div>
     </div>
 </div>

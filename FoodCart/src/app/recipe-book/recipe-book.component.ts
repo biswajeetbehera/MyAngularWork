@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Recipe } from './recipe.modal';
 
 @Component({
   selector: 'app-recipe-book',
@@ -6,10 +7,14 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./recipe-book.component.sass']
 })
 export class RecipeBookComponent implements OnInit {
-
-  constructor() { }
+  recipeClicked: Recipe;
+  constructor () { }
 
   ngOnInit() {
+  }
+
+  OnRecipeClicked(recipe: Recipe) {
+    this.recipeClicked = recipe;
   }
 
 }

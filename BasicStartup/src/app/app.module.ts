@@ -1,3 +1,5 @@
+import { UnlessDirectiveDirective } from './CustomDirectives/unless-directive.directive';
+import { HighlightDirective } from './CustomDirectives/highlight.directive';
 import { PropertyBindingComponent } from './property-binding/property-binding.component';
 import { SuccessAlertComponent } from './success-alert/success-alert.component';
 import { BrowserModule } from '@angular/platform-browser';
@@ -23,7 +25,9 @@ import { EvenComponentComponent } from './ComponentAssignment/even-component/eve
     ServerComponent,
     GameControlComponent,
     OddComponentComponent,
-    EvenComponentComponent
+    EvenComponentComponent,
+    HighlightDirective,
+    UnlessDirectiveDirective
   ],
   imports: [
     BrowserModule,

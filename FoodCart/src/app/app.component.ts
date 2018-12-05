@@ -8,10 +8,7 @@ import { Ingredient } from './shared/ingredients.modal';
 })
 export class AppComponent {
   featureLoaded = 'recipe';
-  ingredients: Ingredient[] = [
-    new Ingredient('Apples', 10),
-    new Ingredient('tomatoes', 5)
-  ];
+
   OnSelect(feature: string) {
     this.featureLoaded = feature;
   }

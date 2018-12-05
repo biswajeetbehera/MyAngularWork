@@ -1,3 +1,4 @@
+import { ShoppingListService } from '../shared/shopping-list.service';
 import { Ingredient } from './../shared/ingredients.modal';
 import { Component, OnInit, Input } from '@angular/core';
 
@@ -8,11 +9,14 @@ import { Component, OnInit, Input } from '@angular/core';
 })
 export class ShopingListComponent implements OnInit {
 
-  @Input() ingredients: Ingredient[];
+  ingredients: Ingredient[];
 
-  constructor () { }
+  constructor (public shopService: ShoppingListService) { }
 
   ngOnInit() {
+    this.ingredients = this.shopService.ingredients;
+    this.shopService.ingredientChanged.subscribe((ingredients: Ingredient[]) => this.ingredients = ingredients);
   }
+
 
 }

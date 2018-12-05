@@ -25,7 +25,7 @@
       <div class="dropdown-menu"
            aria-labelledby="navbarDropdownMenuLink">
         <a class="dropdown-item"
-           href="#">Add Ingredients</a>
+           (click)="AddIngredients()">Add ingredient To shop list</a>
         <a class="dropdown-item"
            href="#">Add recipe</a>
         <a class="dropdown-item"
@@ -42,5 +42,9 @@
 <div class="row">
   <div class="col-12">
     ingredients
+    <p class="col-12 mr-1"
+       *ngFor="let ingredient of detailRecipe.ingredients">
+      {{ ingredient.name }} - ({{ ingredient.amount }})
+    </p>
   </div>
 </div>

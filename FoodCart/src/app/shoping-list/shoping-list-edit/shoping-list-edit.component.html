@@ -4,22 +4,33 @@
       <div class="row">
         <div class="col-5">
           <div class="form-group">
-            <label for="name" class="d-block">Name:
-              <input type="text" name="name" id="name" class="form-control">
+            <label for="name"
+                   class="d-block">Name:
+              <input type="text"
+                     name="name"
+                     id="name"
+                     class="form-control"
+                     #ingredientName>
             </label>
           </div>
         </div>
         <div class="col-7">
           <div class="form-group">
-            <label for="amount" class="d-block">Amunt:
-              <input type="number" name="amount" id="amount" class="form-control">
+            <label for="amount"
+                   class="d-block">Amunt:
+              <input type="number"
+                     name="amount"
+                     id="amount"
+                     class="form-control"
+                     #ingredientAmount>
             </label>
           </div>
         </div>
       </div>
       <div class="row">
         <div class="col-12">
-          <button class="btn btn-success mr-5">Add</button>
+          <button class="btn btn-success mr-5"
+                  (click)="AddIngredient($event)">Add</button>
           <button class="btn btn-danger mr-5">Delete</button>
           <button class="btn btn-primary mr-5">clear</button>
         </div>

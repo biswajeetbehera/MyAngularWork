@@ -1,3 +1,4 @@
+import { ServiceModule } from './ServicesComponent/service-component.module';
 import { UnlessDirectiveDirective } from './CustomDirectives/unless-directive.directive';
 import { HighlightDirective } from './CustomDirectives/highlight.directive';
 import { PropertyBindingComponent } from './property-binding/property-binding.component';
@@ -13,6 +14,9 @@ import { ServerComponent } from './server/server.component';
 import { GameControlComponent } from './ComponentAssignment/game-control/game-control.component';
 import { OddComponentComponent } from './ComponentAssignment/odd-component/odd-component.component';
 import { EvenComponentComponent } from './ComponentAssignment/even-component/even-component.component';
+import { ServiceComponentComponent } from './ServicesComponent/service-component.component';
+import { ServicesAssignmentComponent } from './services-assignment/services-assignment.component';
+import { ServicesAssignmentModule } from './services-assignment/services-assignment.module';
 
 @NgModule({
   declarations: [
@@ -27,11 +31,15 @@ import { EvenComponentComponent } from './ComponentAssignment/even-component/eve
     OddComponentComponent,
     EvenComponentComponent,
     HighlightDirective,
-    UnlessDirectiveDirective
+    UnlessDirectiveDirective,
+    ServiceComponentComponent,
+    ServicesAssignmentComponent
   ],
   imports: [
     BrowserModule,
     FormsModule,
+    ServiceModule,
+    ServicesAssignmentModule
   ],
   providers: [],
   bootstrap: [AppComponent]

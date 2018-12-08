@@ -11,7 +11,11 @@ import { ServersService } from '../servers.service';
 export class ServerComponent implements OnInit {
   server: { id: number, name: string, status: string };
 
-  constructor (private serversService: ServersService, public activeRoute: ActivatedRoute, public router: Router) { }
+  constructor (
+    private serversService: ServersService,
+    public activeRoute: ActivatedRoute,
+    public router: Router
+  ) { }
 
   ngOnInit() {
     this.activeRoute
@@ -20,7 +24,7 @@ export class ServerComponent implements OnInit {
   }
 
   onLoad() {
-    this.router.navigate(['edit'], { relativeTo: this.activeRoute });
+    this.router.navigate(['edit'], { relativeTo: this.activeRoute, queryParamsHandling: 'preserve' });
   }
 
 }

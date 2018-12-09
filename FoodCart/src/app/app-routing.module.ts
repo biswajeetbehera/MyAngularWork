@@ -5,8 +5,8 @@ import { RecipeBookComponent } from './recipe-book/recipe-book.component';
 
 
 const appRoutes: Routes = [
-    { path: '', redirectTo: 'recipe', pathMatch: 'full' },
-    { path: 'recipe', component: RecipeBookComponent },
+    { path: '', redirectTo: 'recipes', pathMatch: 'full' },
+    { path: 'recipes', component: RecipeBookComponent },
     { path: 'shopping-list', component: ShopingListComponent }
 ];
 

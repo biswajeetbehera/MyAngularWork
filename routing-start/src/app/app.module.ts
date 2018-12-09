@@ -15,6 +15,7 @@ import { ServerComponent } from './servers/server/server.component';
 import { ServersService } from './servers/servers.service';
 import { NotFoundComponent } from './not-found/not-found.component';
 import { AppRoutingModule } from './app-routing.Module';
+import { ErrorHandlerComponent } from './error-handler/error-handler.component';
 
 
 @NgModule({
@@ -26,7 +27,8 @@ import { AppRoutingModule } from './app-routing.Module';
     UserComponent,
     EditServerComponent,
     ServerComponent,
-    NotFoundComponent
+    NotFoundComponent,
+    ErrorHandlerComponent
   ],
   imports: [
     BrowserModule,

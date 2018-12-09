@@ -1,5 +1,5 @@
 export class ServersService {
-  private servers = [
+  private servers: Server[] = [
     {
       id: 1,
       name: 'Productionserver',
@@ -17,11 +17,11 @@ export class ServersService {
     }
   ];
 
-  getServers() {
+  getServers(): Server[] {
     return this.servers;
   }
 
-  getServer(id: number) {
+  getServer(id: number): Server {
     const server = this.servers.find(
       (s) => {
         return s.id === id;
@@ -30,7 +30,7 @@ export class ServersService {
     return server;
   }
 
-  updateServer(id: number, serverInfo: {name: string, status: string}) {
+  updateServer(id: number, serverInfo: { name: string, status: string }): void {
     const server = this.servers.find(
       (s) => {
         return s.id === id;
@@ -41,4 +41,8 @@ export class ServersService {
       server.status = serverInfo.status;
     }
   }
+}
+
+export class Server {
+  constructor (public id: number, public name: string, public status: string) { }
 }

@@ -1,5 +1,5 @@
 import { RecipeService } from './../recipe.service';
-import { Component, OnInit, Output, EventEmitter } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { Recipe } from '../recipe.modal';
 
 @Component({
@@ -15,7 +15,4 @@ export class RecipeListComponent implements OnInit {
     this.recipes = this.recipeService.recipes;
   }
 
-  OnClick(recipe: Recipe) {
-    this.recipeService.recipeClicked.emit(recipe);
-  }
 }

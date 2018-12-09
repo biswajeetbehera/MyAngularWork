@@ -6,7 +6,7 @@ import { Ingredient } from '../shared/ingredients.modal';
 @Injectable()
 export class RecipeService {
     private _recipes: Recipe[] = [
-        new Recipe('Test Recipe',
+        new Recipe(0, 'Test Recipe',
             'this is Test Recipe',
             'https://upload.wikimedia.org/wikipedia/commons/1/15/Recipe_logo.jpeg',
             [
@@ -15,10 +15,14 @@ export class RecipeService {
             ])
     ];
 
-    recipeClicked = new EventEmitter<Recipe>();
+    // recipeClicked = new EventEmitter<Recipe>();
 
     get recipes() {
         return this._recipes.slice();
+    }
+
+    getRecipeById(id: number) {
+        return this._recipes.find((recp) => recp.id === id);
     }
 
     AddIngredients(ingredients: Ingredient[]) {

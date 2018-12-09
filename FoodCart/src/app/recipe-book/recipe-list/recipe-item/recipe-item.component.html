@@ -1,5 +1,7 @@
 <a style="cursor: pointer;"
-   class="d-lg-flex text-dark list-group-item">
+   class="d-lg-flex text-dark list-group-item"
+   [routerLink]="[recipe.id]"
+   routerLinkActive="active">
   <div class="col-9"
        float-left>
     <h4 class="mb-1 list-item-heading"> {{recipe.name}} </h4>

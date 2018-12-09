@@ -9,11 +9,10 @@ import { RecipeService } from './recipe.service';
   providers: [RecipeService]
 })
 export class RecipeBookComponent implements OnInit {
-  recipeClicked: Recipe;
-  constructor (public recipeService: RecipeService) { }
+
+  constructor () { }
 
   ngOnInit() {
-    this.recipeService.recipeClicked.subscribe((recipe) => this.recipeClicked = recipe);
   }
 
 }

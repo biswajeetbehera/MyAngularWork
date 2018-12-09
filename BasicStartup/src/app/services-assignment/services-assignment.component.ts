@@ -11,7 +11,7 @@ export class ServicesAssignmentComponent implements OnInit {
   activeUsers: string[];
   inactiveUsers: string[];
 
-  constructor (public users: UsersService) { }
+  constructor (private users: UsersService) { }
 
   ngOnInit() {
     this.activeUsers = this.users.activeUsers;

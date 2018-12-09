@@ -19,8 +19,8 @@ export class EditServerComponent implements OnInit, CanDeactivateGuardComponent 
 
   constructor (
     private serversService: ServersService,
-    public activeRooute: ActivatedRoute,
-    public router: Router
+    private activeRooute: ActivatedRoute,
+    private router: Router
   ) { }
 
   ngOnInit() {

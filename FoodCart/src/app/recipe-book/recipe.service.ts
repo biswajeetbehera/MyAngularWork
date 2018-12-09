@@ -28,5 +28,5 @@ export class RecipeService {
     AddIngredients(ingredients: Ingredient[]) {
         this.shopService.AddIngredients(ingredients);
     }
-    constructor (public shopService: ShoppingListService) { }
+    constructor (private shopService: ShoppingListService) { }
 }

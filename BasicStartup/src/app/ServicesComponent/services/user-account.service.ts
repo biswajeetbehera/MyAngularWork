@@ -24,5 +24,5 @@ export class UserAccountService {
         this.logger.log(newStatus);
     }
 
-    constructor (public logger: LoggerService) { }
+    constructor (private logger: LoggerService) { }
 }

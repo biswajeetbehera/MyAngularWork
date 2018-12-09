@@ -11,7 +11,7 @@ export class ShopingListEditComponent implements OnInit {
   @ViewChild('ingredientName') ingredName: ElementRef;
   @ViewChild('ingredientAmount') ingredAmount: ElementRef;
 
-  constructor (public shopService: ShoppingListService) { }
+  constructor (private shopService: ShoppingListService) { }
 
   ngOnInit() {
   }

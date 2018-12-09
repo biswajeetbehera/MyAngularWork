@@ -10,7 +10,7 @@ import { Account } from './shared/user-account.modal';
 export class ServiceComponentComponent implements OnInit {
   accounts: Account[] = this.user.accounts;
 
-  constructor (public user: UserAccountService) { }
+  constructor (private user: UserAccountService) { }
 
   ngOnInit() {
     this.user.statusChanged.subscribe(newStatus => {

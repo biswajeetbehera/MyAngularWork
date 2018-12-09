@@ -16,7 +16,7 @@ export class HighlightDirective implements OnInit {
   @Input() highlightColor: string;
   @HostBinding('style.backgroundColor') backgroundColor = 'transparent';
 
-  constructor (public elementRef: ElementRef, public renderer: Renderer2) { }
+  constructor (private elementRef: ElementRef, private renderer: Renderer2) { }
   // @HostListener('mouseover') onMouseOver(eventData: Event) {
   //   this.renderer.setStyle(this.elementRef.nativeElement,'backgroundColor', 'blue');
   // }

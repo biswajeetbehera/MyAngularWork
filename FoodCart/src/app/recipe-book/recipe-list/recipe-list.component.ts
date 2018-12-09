@@ -9,7 +9,7 @@ import { Recipe } from '../recipe.modal';
 })
 export class RecipeListComponent implements OnInit {
   recipes: Recipe[];
-  constructor (public recipeService: RecipeService) { }
+  constructor (private recipeService: RecipeService) { }
 
   ngOnInit() {
     this.recipes = this.recipeService.recipes;

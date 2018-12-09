@@ -11,7 +11,7 @@ export class NewAccountComponent {
   @ViewChild('accountName') accountName: ElementRef;
   @ViewChild('status') status: ElementRef;
 
-  constructor (public user: UserAccountService) { }
+  constructor (private user: UserAccountService) { }
 
   onCreateAccount() {
     const accNameVal: HTMLInputElement = this.accountName.nativeElement;

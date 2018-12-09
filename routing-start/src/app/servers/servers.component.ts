@@ -12,8 +12,8 @@ export class ServersComponent implements OnInit {
 
   constructor (
     private serversService: ServersService,
-    public router: Router,
-    public route: ActivatedRoute
+    private router: Router,
+    private route: ActivatedRoute
   ) { }
 
   ngOnInit() {

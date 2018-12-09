@@ -8,7 +8,7 @@ export class UsersService {
     activeUsers = ['Max', 'Anna'];
     inactiveUsers = ['Chris', 'Manu'];
 
-    constructor (public counter: CounterService) { }
+    constructor (private counter: CounterService) { }
 
     SetToInactive(id: number) {
         this.inactiveUsers.push(this.activeUsers[id]);

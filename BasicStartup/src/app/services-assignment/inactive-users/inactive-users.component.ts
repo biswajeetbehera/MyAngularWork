@@ -8,7 +8,7 @@ import { Component, Input } from '@angular/core';
 })
 export class InactiveUsersComponent {
   @Input() users: string[];
-  constructor (public user: UsersService) { }
+  constructor (private user: UsersService) { }
 
   onSetToActive(id: number) {
     this.user.SetToActive(id);

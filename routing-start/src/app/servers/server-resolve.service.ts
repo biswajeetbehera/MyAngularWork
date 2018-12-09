@@ -8,7 +8,7 @@ import { Injectable } from '@angular/core';
     providedIn: 'root',
 })
 export class ServerResolver implements Resolve<Server> {
-    constructor (public servService: ServersService) { }
+    constructor (private servService: ServersService) { }
 
     resolve(route: ActivatedRouteSnapshot, state: RouterStateSnapshot): Observable<Server> | Promise<Server> | Server {
         return this.servService.getServer(+route.params['id']);

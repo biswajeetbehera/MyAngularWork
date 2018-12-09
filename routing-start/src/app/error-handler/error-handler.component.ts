@@ -8,7 +8,7 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ErrorHandlerComponent implements OnInit {
   message: string;
-  constructor (public route: ActivatedRoute) { }
+  constructor (private route: ActivatedRoute) { }
 
   ngOnInit() {
     this.route.data.subscribe((data: Data) => this.message = data['message']);

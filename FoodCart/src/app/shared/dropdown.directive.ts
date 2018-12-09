@@ -7,7 +7,7 @@ export class DropdownDirective implements OnInit {
     @HostBinding('class.show') toggleClass: boolean;
     toggleShow = false;
     dropdownItem: HTMLDivElement;
-    constructor (public el: ElementRef, public ren: Renderer2) { }
+    constructor (private el: ElementRef, private ren: Renderer2) { }
     ngOnInit(): void {
         // Called after the constructor, initializing input properties, and the first call to ngOnChanges.
         // Add 'implements OnInit' to the class.

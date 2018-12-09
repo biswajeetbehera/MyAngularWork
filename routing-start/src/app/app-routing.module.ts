@@ -37,6 +37,13 @@ const appRoutes: Routes = [
 
 @NgModule({
     imports: [
+        /* useHash for location strategies for server deployment. Because there might be situation
+        ** where we dont have path defined on local to be availab on server. In that case we should
+        ** always return index.html for 404 error on server.
+        ** if that strategy cannot be implement on server useHash strategy should work for you.
+        */
+
+        // RouterModule.forRoot(appRoutes, { useHash: true}),
         RouterModule.forRoot(appRoutes),
     ],
     exports: [

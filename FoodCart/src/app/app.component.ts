@@ -7,9 +7,5 @@ import { Ingredient } from './shared/ingredients.modal';
   styleUrls: ['./app.component.sass']
 })
 export class AppComponent {
-  featureLoaded = 'recipe';
 
-  OnSelect(feature: string) {
-    this.featureLoaded = feature;
-  }
 }

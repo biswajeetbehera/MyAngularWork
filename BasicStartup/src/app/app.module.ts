@@ -18,6 +18,7 @@ import { ServiceComponentComponent } from './ServicesComponent/service-component
 import { ServicesAssignmentComponent } from './services-assignment/services-assignment.component';
 import { ServicesAssignmentModule } from './services-assignment/services-assignment.module';
 import { TemplateDrivenFormComponent } from './template-driven-form/template-driven-form.component';
+import { TemplateDriveAssignmentComponent } from './template-drive-assignment/template-drive-assignment.component';
 
 @NgModule({
   declarations: [
@@ -35,7 +36,8 @@ import { TemplateDrivenFormComponent } from './template-driven-form/template-dri
     UnlessDirectiveDirective,
     ServiceComponentComponent,
     ServicesAssignmentComponent,
-    TemplateDrivenFormComponent
+    TemplateDrivenFormComponent,
+    TemplateDriveAssignmentComponent
   ],
   imports: [
     BrowserModule,

@@ -1,6 +1,8 @@
 {
   "rules": {
-    "at-rule-blacklist": ["debug"],
+    "at-rule-blacklist": [
+      "debug"
+    ],
     "at-rule-no-unknown": null,
     "at-rule-no-vendor-prefix": true,
     "block-no-empty": true,
@@ -18,11 +20,21 @@
     "declaration-colon-space-after": "always-single-line",
     "declaration-colon-space-before": "never",
     "declaration-property-value-blacklist": {
-      "border": ["none"],
-      "border-top": ["none"],
-      "border-right": ["none"],
-      "border-bottom": ["none"],
-      "border-left": ["none"]
+      "border": [
+        "none"
+      ],
+      "border-top": [
+        "none"
+      ],
+      "border-right": [
+        "none"
+      ],
+      "border-bottom": [
+        "none"
+      ],
+      "border-left": [
+        "none"
+      ]
     },
     "function-comma-space-after": "always-single-line",
     "function-parentheses-space-inside": "never",
@@ -50,14 +62,18 @@
     "rule-empty-line-before": [
       "always-multi-line",
       {
-        "except": ["first-nested"],
-        "ignore": ["after-comment"]
+        "except": [
+          "first-nested"
+        ],
+        "ignore": [
+          "after-comment"
+        ]
       }
     ],
     "selector-list-comma-newline-after": "always",
     "selector-max-compound-selectors": 3,
     "selector-max-id": 0,
-    "selector-no-qualifying-type": true,
+    "selector-no-qualifying-type": null,
     "selector-no-vendor-prefix": true,
     "selector-pseudo-element-colon-notation": "double",
     "selector-pseudo-element-no-unknown": true,

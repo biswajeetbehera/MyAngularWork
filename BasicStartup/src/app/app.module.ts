@@ -17,6 +17,7 @@ import { EvenComponentComponent } from './ComponentAssignment/even-component/eve
 import { ServiceComponentComponent } from './ServicesComponent/service-component.component';
 import { ServicesAssignmentComponent } from './services-assignment/services-assignment.component';
 import { ServicesAssignmentModule } from './services-assignment/services-assignment.module';
+import { TemplateDrivenFormComponent } from './template-driven-form/template-driven-form.component';
 
 @NgModule({
   declarations: [
@@ -33,7 +34,8 @@ import { ServicesAssignmentModule } from './services-assignment/services-assignm
     HighlightDirective,
     UnlessDirectiveDirective,
     ServiceComponentComponent,
-    ServicesAssignmentComponent
+    ServicesAssignmentComponent,
+    TemplateDrivenFormComponent
   ],
   imports: [
     BrowserModule,

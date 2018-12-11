@@ -20,6 +20,7 @@ import { ServicesAssignmentModule } from './services-assignment/services-assignm
 import { TemplateDrivenFormComponent } from './template-driven-form/template-driven-form.component';
 import { TemplateDriveAssignmentComponent } from './template-drive-assignment/template-drive-assignment.component';
 import { ReactiveFormComponent } from './reactive-form/reactive-form.component';
+import { ReactiveFormAssignmentComponent } from './reactive-form-assignment/reactive-form-assignment.component';
 
 @NgModule({
   declarations: [
@@ -39,7 +40,8 @@ import { ReactiveFormComponent } from './reactive-form/reactive-form.component';
     ServicesAssignmentComponent,
     TemplateDrivenFormComponent,
     TemplateDriveAssignmentComponent,
-    ReactiveFormComponent
+    ReactiveFormComponent,
+    ReactiveFormAssignmentComponent
   ],
   imports: [
     BrowserModule,

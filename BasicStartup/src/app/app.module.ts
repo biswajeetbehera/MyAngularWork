@@ -7,7 +7,7 @@ import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { AppComponent } from './app.component';
 import { WarningAlertComponent } from './warning-alert/warning-alert.component';
-import { FormsModule } from '@angular/forms';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { DirectivesComponent } from './directives/directives.component';
 import { CockpitComponent } from './cockpit/cockpit.component';
 import { ServerComponent } from './server/server.component';
@@ -19,6 +19,7 @@ import { ServicesAssignmentComponent } from './services-assignment/services-assi
 import { ServicesAssignmentModule } from './services-assignment/services-assignment.module';
 import { TemplateDrivenFormComponent } from './template-driven-form/template-driven-form.component';
 import { TemplateDriveAssignmentComponent } from './template-drive-assignment/template-drive-assignment.component';
+import { ReactiveFormComponent } from './reactive-form/reactive-form.component';
 
 @NgModule({
   declarations: [
@@ -37,11 +38,13 @@ import { TemplateDriveAssignmentComponent } from './template-drive-assignment/te
     ServiceComponentComponent,
     ServicesAssignmentComponent,
     TemplateDrivenFormComponent,
-    TemplateDriveAssignmentComponent
+    TemplateDriveAssignmentComponent,
+    ReactiveFormComponent
   ],
   imports: [
     BrowserModule,
     FormsModule,
+    ReactiveFormsModule,
     ServiceModule,
     ServicesAssignmentModule
   ],

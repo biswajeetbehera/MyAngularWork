@@ -1,3 +1,4 @@
+import { FormsModule } from '@angular/forms';
 import { AppRoutingModule } from './app-routing.module';
 import { ShoppingListService } from './shared/shopping-list.service';
 import { BrowserModule } from '@angular/platform-browser';
@@ -32,6 +33,7 @@ import { RecipeEditComponent } from './recipe-book/recipe-edit/recipe-edit.compo
   imports: [
     BrowserModule,
     AppRoutingModule,
+    FormsModule
   ],
   providers: [ShoppingListService],
   bootstrap: [AppComponent]

@@ -20,5 +20,10 @@ export class ShopingListComponent implements OnInit {
       .subscribe((ingredients: Ingredient[]) => this.ingredients = ingredients);
   }
 
+  OnEditIngredient(ingredient: Ingredient) {
+    this.shopService.ingredientEdited.next(ingredient);
+
+  }
+
 
 }

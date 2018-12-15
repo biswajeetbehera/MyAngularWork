@@ -1,12 +1,15 @@
+import { Subject } from 'rxjs';
 import { ShoppingListService } from '../shared/shopping-list.service';
 import { Recipe } from './recipe.modal';
-import { EventEmitter, Injectable } from '@angular/core';
+import { Injectable } from '@angular/core';
 import { Ingredient } from '../shared/ingredients.modal';
 
-@Injectable()
+@Injectable({
+    providedIn: 'root'
+})
 export class RecipeService {
     private _recipes: Recipe[] = [
-        new Recipe(0, 'Test Recipe',
+        new Recipe('Test Recipe',
             'this is Test Recipe',
             'https://upload.wikimedia.org/wikipedia/commons/1/15/Recipe_logo.jpeg',
             [
@@ -15,7 +18,9 @@ export class RecipeService {
             ])
     ];
 
-    // recipeClicked = new EventEmitter<Recipe>();
+    recipeChanged = new Subject<Recipe[]>();
+
+    constructor (private shopService: ShoppingListService) { }
 
     get recipes() {
         return this._recipes.slice();
@@ -28,5 +33,22 @@ export class RecipeService {
     AddIngredients(ingredients: Ingredient[]) {
         this.shopService.AddIngredients(ingredients);
     }
-    constructor (private shopService: ShoppingListService) { }
+
+    deleteIngredient(recipeId: number, ingredientId: number) {
+        this._recipes[recipeId].ingredients.splice(ingredientId, 1);
+    }
+
+    updateRecipe(value: Recipe, index: number) {
+        this._recipes[index].name = value.name;
+        this._recipes[index].imagePath = value.imagePath;
+        this._recipes[index].description = value.description;
+        this._recipes[index].ingredients = value.ingredients;
+
+        this.recipeChanged.next(this._recipes.slice());
+    }
+    deleteRecipe(recipeId: number) {
+        this._recipes.splice(recipeId, 1);
+        this.recipeChanged.next(this._recipes.slice());
+    }
+
 }

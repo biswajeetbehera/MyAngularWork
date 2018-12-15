@@ -27,10 +27,11 @@
         <a class="dropdown-item"
            (click)="AddIngredients()">Add ingredient To shop list</a>
         <a class="dropdown-item"
-           style="cursor: pointer;"
+           style="cursor: pointer"
            (click)="onEdit()">edit recipe</a>
         <a class="dropdown-item"
-           style="cursor: pointer;">delete recipe</a>
+           style="cursor: pointer"
+           (click)="deleteRecipe(deleteRecipe.id)">delete recipe</a>
       </div>
     </div>
   </div>

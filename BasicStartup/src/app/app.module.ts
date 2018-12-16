@@ -1,3 +1,4 @@
+import { HttpModule } from '@angular/http';
 import { ServiceModule } from './ServicesComponent/service-component.module';
 import { UnlessDirectiveDirective } from './CustomDirectives/unless-directive.directive';
 import { HighlightDirective } from './CustomDirectives/highlight.directive';
@@ -27,6 +28,7 @@ import { FilterPipe } from './filter.pipe';
 import { ReverseStringPipe } from './reverse-string.pipe';
 import { ReverseArrayValuePipe } from './reverse-array-value.pipe';
 import { SortPipe } from './sort.pipe';
+import { HttpDemoComponent } from './http-demo/http-demo.component';
 
 @NgModule({
   declarations: [
@@ -53,14 +55,16 @@ import { SortPipe } from './sort.pipe';
     FilterPipe,
     ReverseStringPipe,
     ReverseArrayValuePipe,
-    SortPipe
+    SortPipe,
+    HttpDemoComponent
   ],
   imports: [
     BrowserModule,
     FormsModule,
     ReactiveFormsModule,
     ServiceModule,
-    ServicesAssignmentModule
+    ServicesAssignmentModule,
+    HttpModule,
   ],
   providers: [],
   bootstrap: [AppComponent]

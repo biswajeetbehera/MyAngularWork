@@ -21,6 +21,9 @@ import { TemplateDrivenFormComponent } from './template-driven-form/template-dri
 import { TemplateDriveAssignmentComponent } from './template-drive-assignment/template-drive-assignment.component';
 import { ReactiveFormComponent } from './reactive-form/reactive-form.component';
 import { ReactiveFormAssignmentComponent } from './reactive-form-assignment/reactive-form-assignment.component';
+import { PipeDemoComponent } from './pipe-demo/pipe-demo.component';
+import { ShortenPipe } from './shorten.pipe';
+import { FilterPipe } from './filter.pipe';
 
 @NgModule({
   declarations: [
@@ -41,7 +44,10 @@ import { ReactiveFormAssignmentComponent } from './reactive-form-assignment/reac
     TemplateDrivenFormComponent,
     TemplateDriveAssignmentComponent,
     ReactiveFormComponent,
-    ReactiveFormAssignmentComponent
+    ReactiveFormAssignmentComponent,
+    PipeDemoComponent,
+    ShortenPipe,
+    FilterPipe
   ],
   imports: [
     BrowserModule,

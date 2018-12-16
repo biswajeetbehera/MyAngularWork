@@ -38,41 +38,45 @@
         </label>
       </div>
       <div class="row flex-column"
-           formArrayName="ingredients"> Ingredients:
-        <button class="btn btn-outline-primary"
-                type="button"
-                *ngIf="getIngredArray().length === 0"
-                (click)="AddIngredient()">Add Ingredient</button>
-        <div class="form-group d-flex"
-             *ngFor="let arrayGrp of getIngredArray(); let i=index"
-             [formGroupName]="i">
-          <div class="col-5">
-            <label class="w-100"
-                   for="ingredientName"> ingredientName:
-              <input class="d-block w-100"
-                     type="text"
-                     id="ingredientName"
-                     formControlName="name">
-            </label>
-          </div>
-          <div class="col-5">
-            <label class="w-100"
-                   for="ingredientAmount"> ingredientName:
-              <input class="d-block w-100"
-                     type="number"
-                     id="ingredientAmount"
-                     formControlName="amount">
-            </label>
-          </div>
-          <div class="col-2 d-flex justify-content-center">
-            <button type="button"
-                    class="btn btn-danger my-3"
-                    (click)="deleteIngredient(i)">X</button>
+           formArrayName="ingredients">
+
+        <div class="col-12">
+          <label>Ingredients:</label>
+          <button class="btn btn-outline-primary my-2"
+                  type="button"
+                  *ngIf="getIngredArray().length === 0"
+                  (click)="AddIngredient()">Add Ingredient</button>
+          <div class="form-group d-flex"
+               *ngFor="let arrayGrp of getIngredArray(); let i=index"
+               [formGroupName]="i">
+            <div class="col-5">
+              <label class="w-100"
+                     for="ingredientName"> ingredientName:
+                <input class="d-block w-100"
+                       type="text"
+                       id="ingredientName"
+                       formControlName="name">
+              </label>
+            </div>
+            <div class="col-5">
+              <label class="w-100"
+                     for="ingredientAmount"> ingredientName:
+                <input class="d-block w-100"
+                       type="number"
+                       id="ingredientAmount"
+                       formControlName="amount">
+              </label>
+            </div>
+            <div class="col-2 d-flex justify-content-center">
+              <button type="button"
+                      class="btn btn-danger my-3"
+                      (click)="deleteIngredient(i)">X</button>
+            </div>
           </div>
         </div>
       </div>
       <div class="row mb-5">
-        <div class="btn-group">
+        <div class="btn-group col-12">
           <button [disabled]="!editForm.valid"
                   class="btn btn-success mr-5">Save</button>
           <button class="btn btn-danger"

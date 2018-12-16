@@ -71,7 +71,12 @@ export class RecipeEditComponent implements OnInit {
     }));
   }
   SaveForm() {
-    this.recipeService.updateRecipe(this.editForm.value, this.id);
+    if (this.editMode) {
+      this.recipeService.updateRecipe(this.editForm.value, this.id);
+    } else {
+      this.recipeService.AddNewRecipe(this.editForm.value);
+    }
+
     this.router.navigate(['../'], { relativeTo: this.route });
   }
 

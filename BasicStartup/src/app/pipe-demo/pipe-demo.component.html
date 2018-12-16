@@ -11,6 +11,8 @@
                 class="btn btn-outline-primary mb-1"
                 (click)="onAddServer()">Add Server</button>
       </div>
+      <br>
+      <label for="appstatus">App Status is: {{ appstatus | async}}</label>
       <ul class="list-group col-12">
         <li class="list-group-item"
             *ngFor="let server of servers | filter: filterstring: 'status'"

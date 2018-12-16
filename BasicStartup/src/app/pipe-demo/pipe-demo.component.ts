@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Observable } from 'rxjs';
 
 @Component({
   selector: 'app-pipe-demo',
@@ -34,6 +35,11 @@ export class PipeDemoComponent implements OnInit {
     }
   ];
   filterstring;
+  // tslint:disable-next-line:no-shadowed-variable
+  appstatus = new Promise((resolve, reject) => {
+    setTimeout(() => resolve('stable'), 2000);
+  });
+
   constructor () { }
 
   ngOnInit() {

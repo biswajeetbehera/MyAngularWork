@@ -34,9 +34,9 @@ export class RecipeService {
         this.shopService.AddIngredients(ingredients);
     }
 
-    deleteIngredient(recipeId: number, ingredientId: number) {
-        this._recipes[recipeId].ingredients.splice(ingredientId, 1);
-    }
+    // deleteIngredient(recipeId: number, ingredientId: number) {
+    //     this._recipes[recipeId].ingredients.splice(ingredientId, 1);
+    // }
 
     updateRecipe(value: Recipe, index: number) {
         this._recipes[index].name = value.name;

@@ -1,7 +1,7 @@
 import { Recipe } from './../recipe.modal';
 import { FormGroup, FormControl, Validators, FormArray, AbstractControl } from '@angular/forms';
 import { ActivatedRoute, Params, Router } from '@angular/router';
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, ViewChild, ElementRef } from '@angular/core';
 import { RecipeService } from '../recipe.service';
 
 @Component({
@@ -14,6 +14,7 @@ export class RecipeEditComponent implements OnInit {
   editMode = false;
   editForm: FormGroup;
   ingredients = new FormArray([]);
+  @ViewChild('imagePath') image: ElementRef;
 
   constructor (
     private route: ActivatedRoute,
@@ -27,12 +28,13 @@ export class RecipeEditComponent implements OnInit {
       this.editMode = params['id'] != null;
       this.formInit(this.recipeService.getRecipeById(this.id));
     });
+    console.log(this.image);
   }
 
   private formInit(recipe: Recipe): void {
-    let recipeName = ' ';
-    let recipeImage = ' ';
-    let recipeDesc = ' ';
+    let recipeName = '';
+    let recipeImage = '';
+    let recipeDesc = '';
     if (this.editMode) {
       recipeName = recipe.name;
       recipeImage = recipe.imagePath;
@@ -55,7 +57,7 @@ export class RecipeEditComponent implements OnInit {
 
   deleteIngredient(index: number): void {
     this.getIngredArray().splice(index, 1);
-    if (this.editMode) { this.recipeService.deleteIngredient(this.id, index); }
+    if (this.editMode) { this.editForm.value.ingredients.splice(index, 1); }
   }
 
   AddIngredient() {

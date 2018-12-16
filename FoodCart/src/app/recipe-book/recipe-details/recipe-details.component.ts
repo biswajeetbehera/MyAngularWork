@@ -10,12 +10,18 @@ import { RecipeService } from '../recipe.service';
 })
 export class RecipeDetailsComponent implements OnInit {
   detailRecipe: Recipe;
+  id: string;
 
   constructor (private recipeService: RecipeService, private route: ActivatedRoute, private router: Router) { }
 
   ngOnInit() {
     this.route.params.subscribe((params: Params) => {
+      this.id = params['id'];
       this.detailRecipe = this.recipeService.getRecipeById(+params['id']);
+    });
+
+    this.recipeService.recipeChanged.subscribe((recipes: Recipe[]) => {
+      this.detailRecipe = recipes[+this.id];
     });
   }
 

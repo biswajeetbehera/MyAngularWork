@@ -1,5 +1,4 @@
 import { Component, OnInit } from '@angular/core';
-import { Observable } from 'rxjs';
 
 @Component({
   selector: 'app-pipe-demo',
@@ -34,8 +33,9 @@ export class PipeDemoComponent implements OnInit {
       started: new Date(15, 1, 2017)
     }
   ];
+
   filterstring;
-  // tslint:disable-next-line:no-shadowed-variable
+
   appstatus = new Promise((resolve, reject) => {
     setTimeout(() => resolve('stable'), 2000);
   });
@@ -59,5 +59,9 @@ export class PipeDemoComponent implements OnInit {
       status: 'offline',
       started: new Date(15, 1, 2019)
     });
+  }
+
+  sortableFunction(a, b): number {
+    return a.name.localeCompare(b.name);
   }
 }

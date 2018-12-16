@@ -24,6 +24,9 @@ import { ReactiveFormAssignmentComponent } from './reactive-form-assignment/reac
 import { PipeDemoComponent } from './pipe-demo/pipe-demo.component';
 import { ShortenPipe } from './shorten.pipe';
 import { FilterPipe } from './filter.pipe';
+import { ReverseStringPipe } from './reverse-string.pipe';
+import { ReverseArrayValuePipe } from './reverse-array-value.pipe';
+import { SortPipe } from './sort.pipe';
 
 @NgModule({
   declarations: [
@@ -47,7 +50,10 @@ import { FilterPipe } from './filter.pipe';
     ReactiveFormAssignmentComponent,
     PipeDemoComponent,
     ShortenPipe,
-    FilterPipe
+    FilterPipe,
+    ReverseStringPipe,
+    ReverseArrayValuePipe,
+    SortPipe
   ],
   imports: [
     BrowserModule,

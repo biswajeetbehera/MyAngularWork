@@ -15,10 +15,10 @@
       <label for="appstatus">App Status is: {{ appstatus | async}}</label>
       <ul class="list-group col-12">
         <li class="list-group-item"
-            *ngFor="let server of servers | filter: filterstring: 'status'"
+            *ngFor="let server of servers| sort: sortableFunction | filter: filterstring: 'status'"
             [ngClass]="getStatusClasses(server)">
           <span class="badge badge-dark float-right">
-            {{ server.status }}
+            {{ server.status | reverseString}}
           </span>
           <strong>{{ server.name | shorten }}</strong> | {{ server.instanceType | uppercase }} | {{ server.started |
           date:

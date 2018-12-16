@@ -1,3 +1,4 @@
+import { HttpModule } from '@angular/http';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { AppRoutingModule } from './app-routing.module';
 import { ShoppingListService } from './shared/shopping-list.service';
@@ -35,6 +36,7 @@ import { RecipeEditComponent } from './recipe-book/recipe-edit/recipe-edit.compo
     AppRoutingModule,
     FormsModule,
     ReactiveFormsModule,
+    HttpModule
   ],
   providers: [ShoppingListService],
   bootstrap: [AppComponent]

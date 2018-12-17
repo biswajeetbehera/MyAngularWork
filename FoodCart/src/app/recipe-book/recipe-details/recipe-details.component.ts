@@ -18,7 +18,7 @@ export class RecipeDetailsComponent implements OnInit {
   ngOnInit() {
     this.route.params.subscribe((params: Params) => {
       this.id = params['id'];
-      this.detailRecipe = this.recipeService.getRecipeById(+params['id']);
+      this.detailRecipe = this.recipeService.getRecipeById(+this.id);
     });
 
     this.recipeService.recipeChanged.subscribe((recipes: Recipe[]) => {
@@ -35,9 +35,9 @@ export class RecipeDetailsComponent implements OnInit {
     this.router.navigate(['edit'], { relativeTo: this.route });
   }
 
-  deleteRecipe(recipeId: number) {
+  deleteRecipe() {
     if (this.auth.authenticateUser()) {
-      this.recipeService.deleteRecipe(recipeId);
+      this.recipeService.deleteRecipe(+this.id);
       this.router.navigate(['../'], { relativeTo: this.route });
     } else {
       this.router.navigate(['/login']);

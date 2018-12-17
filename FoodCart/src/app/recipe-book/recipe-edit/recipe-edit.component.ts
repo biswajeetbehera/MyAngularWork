@@ -28,7 +28,6 @@ export class RecipeEditComponent implements OnInit {
       this.editMode = params['id'] != null;
       this.formInit(this.recipeService.getRecipeById(this.id));
     });
-    console.log(this.image);
   }
 
   private formInit(recipe: Recipe): void {

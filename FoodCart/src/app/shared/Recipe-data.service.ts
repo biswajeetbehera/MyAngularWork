@@ -5,9 +5,7 @@ import { RecipeService } from '../recipe-book/recipe.service';
 import { map } from 'rxjs/operators';
 import { Recipe } from '../recipe-book/recipe.modal';
 
-@Injectable({
-    providedIn: 'root',
-})
+@Injectable()
 export class RecipeDataService {
     constructor (private http: Http, private recipe: RecipeService, private auth: AuthService) { }
     public saveRecipeData() {

@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { RecipeDataService } from '../shared/Recipe-data.service';
 import { Response } from '@angular/http';
 import { AuthService } from '../shared/auth.service';
+import { THIS_EXPR } from '@angular/compiler/src/output/output_ast';
 
 @Component({
   selector: 'app-header',
@@ -28,6 +29,10 @@ export class HeaderComponent implements OnInit {
 
   onLogout() {
     this.auth.logout();
+  }
+
+  authenticateUser() {
+    return this.auth.authenticateUser();
   }
 
 }

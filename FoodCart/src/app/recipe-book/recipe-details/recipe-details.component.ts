@@ -39,8 +39,9 @@ export class RecipeDetailsComponent implements OnInit {
     if (this.auth.authenticateUser()) {
       this.recipeService.deleteRecipe(recipeId);
       this.router.navigate(['../'], { relativeTo: this.route });
+    } else {
+      this.router.navigate(['/login']);
     }
-    this.router.navigate(['/login']);
   }
 
 }

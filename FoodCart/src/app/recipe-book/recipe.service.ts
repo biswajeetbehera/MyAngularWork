@@ -4,9 +4,7 @@ import { Recipe } from './recipe.modal';
 import { Injectable } from '@angular/core';
 import { Ingredient } from '../shared/ingredients.modal';
 
-@Injectable({
-    providedIn: 'root'
-})
+@Injectable()
 export class RecipeService {
     private _recipes: Recipe[] = [
         new Recipe('Test Recipe',

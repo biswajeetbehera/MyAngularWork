@@ -3,9 +3,7 @@ import * as firebase from 'firebase';
 import { Injectable } from '@angular/core';
 import { Router } from '@angular/router';
 
-@Injectable({
-    providedIn: 'root',
-})
+@Injectable()
 export class AuthService {
     token: string;
 

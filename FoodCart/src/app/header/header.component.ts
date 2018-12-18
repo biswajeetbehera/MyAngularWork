@@ -1,8 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { RecipeDataService } from '../shared/Recipe-data.service';
-import { Response } from '@angular/http';
 import { AuthService } from '../shared/auth.service';
-import { THIS_EXPR } from '@angular/compiler/src/output/output_ast';
+import { Recipe } from '../recipe-book/recipe.modal';
 
 @Component({
   selector: 'app-header',
@@ -18,8 +17,8 @@ export class HeaderComponent implements OnInit {
   }
 
   onSaveData() {
-    this.recipeData.saveRecipeData().subscribe((response: Response) => {
-      console.log(response.json());
+    this.recipeData.saveRecipeData().subscribe((response: Recipe[]) => {
+      console.log(response);
     });
   }
 

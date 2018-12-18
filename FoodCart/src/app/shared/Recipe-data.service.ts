@@ -1,21 +1,28 @@
+import { HttpClient, HttpParams } from '@angular/common/http';
 import { AuthService } from './auth.service';
-import { Http, Response } from '@angular/http';
 import { Injectable } from '@angular/core';
 import { RecipeService } from '../recipe-book/recipe.service';
 import { map } from 'rxjs/operators';
 import { Recipe } from '../recipe-book/recipe.modal';
 
-@Injectable()
+@Injectable({
+    providedIn: 'root',
+})
 export class RecipeDataService {
-    constructor (private http: Http, private recipe: RecipeService, private auth: AuthService) { }
+
+    constructor (private http: HttpClient, private recipe: RecipeService, private auth: AuthService) { }
+
     public saveRecipeData() {
-        return this.http.put('https://food-cart-a6706.firebaseio.com/recipes.json?auth=' + this.auth.token, this.recipe.recipes);
+        return this.http.put<Recipe[]>('https://food-cart-a6706.firebaseio.com/recipes.json', this.recipe.recipes, {
+            params: new HttpParams().set('auth', this.auth.token)
+        });
     }
 
     public getRecipeData() {
-        this.http.get('https://food-cart-a6706.firebaseio.com/recipes.json?auth=' + this.auth.token)
-            .pipe(map((response: Response) => {
-                const recipes = response.json();
+        this.http.get<Recipe[]>('https://food-cart-a6706.firebaseio.com/recipes.json', {
+            params: new HttpParams().set('auth', this.auth.token),
+        })
+            .pipe(map((recipes) => {
                 return recipes.map((recipe: Recipe) => {
                     if (recipes['ingredients'] === null) {
                         recipe['ingredients'] = [];

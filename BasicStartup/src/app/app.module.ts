@@ -1,4 +1,4 @@
-import { HttpModule } from '@angular/http';
+import { HttpClientModule } from '@angular/common/http';
 import { ServiceModule } from './ServicesComponent/service-component.module';
 import { UnlessDirectiveDirective } from './CustomDirectives/unless-directive.directive';
 import { HighlightDirective } from './CustomDirectives/highlight.directive';
@@ -64,7 +64,7 @@ import { HttpDemoComponent } from './http-demo/http-demo.component';
     ReactiveFormsModule,
     ServiceModule,
     ServicesAssignmentModule,
-    HttpModule,
+    HttpClientModule,
   ],
   providers: [],
   bootstrap: [AppComponent]

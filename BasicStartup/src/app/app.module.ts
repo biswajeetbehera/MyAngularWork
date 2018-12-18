@@ -29,7 +29,8 @@ import { ReverseStringPipe } from './reverse-string.pipe';
 import { ReverseArrayValuePipe } from './reverse-array-value.pipe';
 import { SortPipe } from './sort.pipe';
 import { HttpDemoComponent } from './http-demo/http-demo.component';
-
+import { AnimationDemoComponent } from './animation-demo/animation-demo.component';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 @NgModule({
   declarations: [
     AppComponent,
@@ -56,7 +57,8 @@ import { HttpDemoComponent } from './http-demo/http-demo.component';
     ReverseStringPipe,
     ReverseArrayValuePipe,
     SortPipe,
-    HttpDemoComponent
+    HttpDemoComponent,
+    AnimationDemoComponent
   ],
   imports: [
     BrowserModule,
@@ -65,6 +67,7 @@ import { HttpDemoComponent } from './http-demo/http-demo.component';
     ServiceModule,
     ServicesAssignmentModule,
     HttpClientModule,
+    BrowserAnimationsModule,
   ],
   providers: [],
   bootstrap: [AppComponent]

@@ -7,7 +7,7 @@ import { ProductService } from '../product.service';
 import { Store, select } from '@ngrx/store';
 
 @Component({
-  selector: 'pm-product-list',
+  selector: 'app-product-list',
   templateUrl: './product-list.component.html',
   styleUrls: ['./product-list.component.css']
 })
@@ -36,7 +36,7 @@ export class ProductListComponent implements OnInit, OnDestroy {
     );
 
     this.store.pipe(select('products')).subscribe(products => {
-      this.displayCode = products == null ? false : products.showProductCode;
+      this.displayCode = !products || products.showProductCode;
     });
   }
 
